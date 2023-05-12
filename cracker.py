@@ -10,7 +10,7 @@ from datetime import datetime
 ##########################################################################################################################
 
 def getString(length):
-    array = "abcdefghijklmnopqrstuvwxyz0123456789!@#$%&*()_-+=[]{}?/\|><ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    array = "abcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     # Produto cartesiano do alfabeto de entrada.
     # O elemento mais a direita avanca a cada iteracao.
     for senha in itertools.product(array, repeat = length):
@@ -61,8 +61,8 @@ if __name__ == "__main__":
     data = data_e_hora_sao_paulo.strftime('%d-%m-%Y')
     hora = data_e_hora_sao_paulo.strftime('%H:%M:%S')
 
-    threading.Thread(target=quebra_md5, args=(2, )).start()
-    threading.Thread(target=quebra_md5, args=(3, )).start()
-#    threading.Thread(target=quebra_md5, args=(4, )).start()
+    threading.Thread(target=quebra_md5, args=(4, )).start()
+    threading.Thread(target=quebra_md5, args=(5, )).start()
+    threading.Thread(target=quebra_md5, args=(6, )).start()
 ##########################################################################################################################
 #FIM
